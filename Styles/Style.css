@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: limelight;
+  src: url(../font/limelight-regular.ttf)
+}
+:root {
+  --backcolorfirts: #f3f4ed;
+  --backcolorSecond: #838485;
+  --font-task2: "./font/Limelight-Regular.ttf"
+}
+.btn-warning {
+  background-color: #f7df1e;
+  color: #212529;
+}
