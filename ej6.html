@@ -6,11 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicio 6</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-  <link rel="stylesheet" href="./Styles/Style.css">
   <link rel="shortcut icon" href="./Img/480px-Unofficial_JavaScript_logo_2.svg.png" type="image/x-icon">
 </head>
-<body class="container-fluid d-flex flex-column justify-content-center align-items-center textsize bodyback">
-  
+<body class="container-fluid d-flex flex-column justify-content-center align-items-center">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: limelight;
+  src: url(../font/limelight-regular.ttf)
+}
+:root {
+  --backcolorfirts: #f3f4ed;
+  --backcolorSecond: #838485;
+  --font-task2: "./font/Limelight-Regular.ttf"
+}
+.text-decoration-none{
+  color: #ffffff
+}
+body {
+  margin-top: 50px;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+  font-family: limelight;
+  font-size: 150%;
+}
+  </style>
   <script> function Ej6() {
     for (let index = 1; index <= 30; index++) {
       console.log(index);
@@ -22,7 +45,7 @@
   }
   Ej6();
   </script>
-  <button type="button" class=" shadow btn btn-success" onClick="window.location='./index.html'">Volver</button>
+  <button type="button" class=" shadow btn btn-success my-5" onClick="window.location='./index.html'">Volver</button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
