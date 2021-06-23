@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicio 8</title>
+  <title>Ejercicio 9</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="shortcut icon" href="./Img/480px-Unofficial_JavaScript_logo_2.svg.png" type="image/x-icon">
   <style>
@@ -32,26 +33,30 @@ body {
   font-size: 150%;
 }
   </style>
-  <!--  SE QUE ES MALA PRACTICA METER ESTILOS DENTRO DEL HTML PERO LO HICE POR LA MISMA SIMPLICIDAD DEL PROYECTO. NO TRABAJO DE ESTA MANERA. -->
+  <!-- SE QUE ES MALA PRACTICA METER ESTILOS DENTRO DEL HTML PERO LO HICE POR LA MISMA SIMPLICIDAD DEL PROYECTO. NO TRABAJO DE ESTA MANERA. -->
 </head>
 <body class="container-fluid d-flex flex-column justify-content-center align-items-center">
-
-  <script> function Ej8() {
-  let imput = prompt("Ingresa un numero del 1 al 50")
-  if (!isNaN(imput) && imput <= 50) {
-    console.log(imput);
-    for (let index = 1; index <= imput; index++) {
-      console.log(index);
-      for (let cont = 1; cont <= index ; cont++) {
-        document.write(cont);
-      }
-      document.write("</br>");
+  <script>
+let i;
+let j;
+let filas = Number(prompt("Introduce numero de filas"));
+let colum = Number(prompt("Introduce numero de columnas"));
+let res = filas * colum;
+document.write("<table border>");
+for (i = 0; i < filas; i++) {
+    document.write("<tr>");
+    for (j = 0; j < colum; j++) {
+        document.write("<td>");
+        document.write(res);
+        res--;
+        document.write("</td>");
     }
-  } else {
-    alert('No ingresaste un numero o es mayor a 50, "NO PUEDES INGRESAR LETRAS O SIMBOLOS"')
-  }
-  }
-  Ej8();
+    document.write("</tr>");
+}
+document.write("</table>");
+  
+  
+  Ej10();
   </script>
   <button type="button" class=" shadow btn btn-success my-5" onClick="window.location='./index.html'">Volver</button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

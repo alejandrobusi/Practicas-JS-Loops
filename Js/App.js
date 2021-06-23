@@ -91,7 +91,7 @@ function Ej5() {
   do {
     dni = prompt("Por favor, ingresa el numero.");
     if (parseFloat(dni) == dni ) {
-      dni = parseFloat(dni); /*Comprobamos que sea numero y conversimos*/
+      dni = parseFloat(dni); 
       if (dni >= 0 && dni <= 99999999) {
         rest = dni % 23;
         switch (rest) {
@@ -211,4 +211,96 @@ function Ej6() {
     }
     document.write("</br>")
   }
+} 
+function Ej11(params) {
+  alert("A continuación ingresa el nombre y luego la edad. al finalizar se muestra el nombre y la edad del mayor.")
+  let users= [];
+  for (let index = 0; index < 3; index++) {
+    let userName = prompt("Ingresa un nombre");
+    let userAge = prompt("Ingresa la edad");
+    let user = {name:userName, age:userAge}
+    users.push(user);
+  }
+  let ageList= users.map(element =>`${element.age}`);
+  let bigNumber = Math.max(...ageList);
+  for (let index = 0; index < users.length; index++) {
+    if (bigNumber == users[index].age) {
+      alert("El Mayot es: " + users[index].name + "." + " Su edad es: " + users[index].age + ".");
+    }    
+  }
 }
+function Ej12(params) {
+  let random = Math.round(Math.random() * 100);
+  alert('Tu número aleatorio es: ' + random +".");
+  
+}
+function Ej13(params) {
+let txt =prompt("Ingresa un texto para devolverlo en mayúsculas.(Para salir presiona cancelar o ESQ");
+  if (txt) {
+    alert("El texto en mayúsculas es: " + txt.toUpperCase() + ".");
+  } else {
+    alert('("El texto en mayúsculas es: " + txt.toUpperCase() + ".")')
+  }
+}
+// function Ej11(params) {
+//   const user1Age = prompt("Ingrese edad user 1")
+// const user2Age = prompt("Ingrese edad user 2")
+// const user3Age = prompt("Ingrese edad user 3")
+// const user1Name = prompt("Ingrese nombre user 1")
+// const user2Name = prompt("Ingrese nombre user 2")
+// const user3Name = prompt("Ingrese nombre user 3")
+// const bigNumber = Math.max(user1Age, user2Age, user3Age)
+// if (bigNumber == user1Age) {
+//     alert("El ayor es: "+ user1Name)
+// } else if (bigNumber == user2Age) {
+//     alert("El ayor es: "+ user2Name)
+// } else {
+//     alert("El ayor es: "+ user3Name)
+// }
+// } FIN
+// const userList = [{age: "34", name: "martin"}, {age: "34", name: "ale"}, {age: "25", name: "nico"}]
+// const userAgeList = userList.map(user=>`${user.age}`)
+// const biggerAge = Math.max(...userAgeList)
+// const olderUser = []
+// userList.forEach(user=>{
+//     if (user.age == biggerAge) {
+//     olderUser.push(user.name)
+// }})
+// const formatedUser = olderUser.join(",")
+// if (olderUser.length > 1) {
+//     alert(`Los usuarios más viejis son: ${formatedUser}`);
+// } else {
+//     alert(`EL usuario más viejis es: ${formatedUser}`)
+// }
+function Ej14(params) {
+let txt = prompt("Ingresa un texto.")
+let txtLeng = txt.length;
+console.log(txtLeng)
+for (let index = 0; index < txtLeng; index++) {
+  let stringTxt = txt.charAt(index);
+  if (index < txtLeng -1) {
+    document.write(stringTxt+("-"));
+  } else {
+    document.write(stringTxt);
+  }
+  }
+}
+
+
+
+// function devolver(params) {
+//   //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+//   let txt = prompt("escribe texto.")
+//   alert(`El texto ${txt} tiene ${txt.length} caracteres.`)
+// }
+// function cut() {
+//   //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+//   let txt = prompt("escribe texto.")
+//   // let numb = prompt("ingresa el numero de caracteres que quieres ver.")
+//   let txtInd = txt.length;
+//   console.log(txtInd)
+//   for (let index = 0; index < txtInd; index++) {
+//     let stringTxt = txt.charAt(index);
+//     document.write(stringTxt) 
+//     }
+// }
