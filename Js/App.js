@@ -308,30 +308,24 @@ function Ej16(params) {
 }
 function Ej17(params) {
   let txt = prompt("Ingresa un texto.");
+  let txtMin = txt.toLowerCase();
   let txtPosition ;
-  for (let index = 0; index < txt.length; index++) {
-    let texto = "jajaj"
-    console.log(texto.indexOf("j"))
-
-    if (txt[index] === "a") {
-      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+  for (let index = 0; index < txtMin.length; index++) {    
+    if (txtMin[index] === "a") {
+      alert(`La primer vocal de "${txtMin}" es la numero ${index + 1}. `)
       break
-    }if (txt[index] ==="e") {
-      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+    }if (txtMin[index] ==="e") {
+      alert(`La primer vocal de "${txtMin}" es la numero ${index + 1}. `)
       break
-    } if (txt[index] ==="i") {
-      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+    } if (txtMin[index] ==="i") {
+      alert(`La primer vocal de "${txtMin}" es la numero ${index + 1}. `)
       break
-    } if (txt[index] ==="o") {
-      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+    } if (txtMin[index] ==="o") {
+      alert(`La primer vocal de "${txtMin}" es la numero ${index + 1}. `)
       break
-    } if (txt[index] ==="u") {
-      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+    } if (txtMin[index] ==="u") {
+      alert(`La primer vocal de "${txtMin}" es la numero ${index + 1}. `)
       break
-    } else {
-      alert(`El texto "${txt}," no tiene vocales.`)
-      break
-    }
-      
-    }
+    } 
+  }
 }
