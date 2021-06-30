@@ -232,7 +232,6 @@ function Ej11(params) {
 function Ej12(params) {
   let random = Math.round(Math.random() * 100);
   alert('Tu número aleatorio es: ' + random +".");
-  
 }
 function Ej13(params) {
 let txt =prompt("Ingresa un texto para devolverlo en mayúsculas.(Para salir presiona cancelar o ESQ");
@@ -285,22 +284,54 @@ for (let index = 0; index < txtLeng; index++) {
   }
   }
 }
+function Ej15() {
+  let txt = prompt("Ingresa un texto.") 
+  let txtMin = txt.toLowerCase();
+  let newText = "";
+for (let index = 0; index < txtMin.length; index++) {
+  if (txtMin[index] === "a"||txtMin[index] ==="e"||txtMin[index] ==="i"||txtMin[index] ==="o"||txtMin[index] ==="u") {
+    newText = newText + txtMin[index];
+    console.log(newText)
+    }
+}
+  alert(`El texto tiene las siguientes vocales : ${newText}, en total ${newText.length} Vocales.`)
+}
+function Ej16(params) {
+  let txt = prompt("Ingresa un texto.")
+  let txtLeng = txt.length;
+  let txtInv= "";
+  while (txtLeng >= 0) {
+    txtLeng--
+    txtInv = txtInv + txt.charAt(txtLeng)
+  }
+  alert(`El Texto invertido es : "${txtInv}".`)
+}
+function Ej17(params) {
+  let txt = prompt("Ingresa un texto.");
+  let txtPosition ;
+  for (let index = 0; index < txt.length; index++) {
+    let texto = "jajaj"
+    console.log(texto.indexOf("j"))
 
-
-
-// function devolver(params) {
-//   //1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
-//   let txt = prompt("escribe texto.")
-//   alert(`El texto ${txt} tiene ${txt.length} caracteres.`)
-// }
-// function cut() {
-//   //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
-//   let txt = prompt("escribe texto.")
-//   // let numb = prompt("ingresa el numero de caracteres que quieres ver.")
-//   let txtInd = txt.length;
-//   console.log(txtInd)
-//   for (let index = 0; index < txtInd; index++) {
-//     let stringTxt = txt.charAt(index);
-//     document.write(stringTxt) 
-//     }
-// }
+    if (txt[index] === "a") {
+      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+      break
+    }if (txt[index] ==="e") {
+      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+      break
+    } if (txt[index] ==="i") {
+      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+      break
+    } if (txt[index] ==="o") {
+      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+      break
+    } if (txt[index] ==="u") {
+      alert(`La primer vocal de ${txt} es la numero ${index + 1}. `)
+      break
+    } else {
+      alert(`El texto "${txt}," no tiene vocales.`)
+      break
+    }
+      
+    }
+}
